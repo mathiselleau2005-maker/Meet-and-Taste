@@ -1,1 +1,740 @@
+:root{
+  --cream:#fff6e8;
+  --cream-2:#fffaf2;
+  --navy:#071f49;
+  --blue:#1047d7;
+  --yellow:#f7b733;
+  --green:#65762c;
+  --white:#ffffff;
+  --text:#071f49;
+  --shadow:0 18px 45px rgba(7,31,73,.13);
+  --soft-shadow:0 10px 28px rgba(7,31,73,.08);
+}
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(247,183,51,.18), transparent 26%),
+    radial-gradient(circle at 90% 10%, rgba(16,71,215,.12), transparent 28%),
+    radial-gradient(circle at 80% 80%, rgba(101,118,44,.12), transparent 26%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+a{
+  color:inherit;
+}
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(255,246,232,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(7,31,73,.08);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.brand-flower{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--white);
+  box-shadow:var(--soft-shadow);
+  font-size:34px;
+}
+
+.brand-text{
+  font-family:'Playfair Display',serif;
+  line-height:.9;
+  font-size:23px;
+}
+
+.brand-text span{
+  display:block;
+  color:var(--blue);
+  font-style:italic;
+  font-size:17px;
+}
+
+.nav-links{
+  display:flex;
+  gap:23px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.nav-button,
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 24px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.nav-button{
+  background:var(--navy);
+  color:var(--white);
+}
+
+.btn:hover,
+.nav-button:hover{
+  transform:translateY(-3px);
+}
+
+.primary{
+  background:var(--navy);
+  color:var(--white);
+}
+
+.secondary{
+  background:var(--white);
+  color:var(--navy);
+  border:1px solid rgba(7,31,73,.18);
+}
+
+.yellow{
+  background:var(--yellow);
+  color:var(--navy);
+}
+
+.hero{
+  min-height:90vh;
+  padding:70px 7% 90px;
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  align-items:center;
+  gap:58px;
+  position:relative;
+}
+
+.eyebrow{
+  color:var(--blue);
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:1.2px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:82px;
+  line-height:.92;
+  margin-bottom:26px;
+}
+
+.hero h1 span{
+  color:var(--yellow);
+}
+
+.hero-intro{
+  max-width:650px;
+  font-size:17px;
+  line-height:1.85;
+  margin-bottom:32px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:17px;
+  margin-bottom:28px;
+}
+
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.hero-tags span{
+  background:var(--white);
+  border:1px solid rgba(7,31,73,.06);
+  padding:11px 17px;
+  border-radius:999px;
+  box-shadow:var(--soft-shadow);
+  font-weight:700;
+  font-size:14px;
+}
+
+.hero-visual{
+  position:relative;
+}
+
+.photo-card{
+  min-height:535px;
+  border-radius:44px;
+  background:
+    linear-gradient(120deg,rgba(255,246,232,.1),rgba(7,31,73,.28)),
+    url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1600');
+  background-size:cover;
+  background-position:center;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+}
+
+.photo-card::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:32px;
+}
+
+.photo-overlay{
+  position:absolute;
+  right:38px;
+  top:38px;
+  z-index:2;
+  color:white;
+  font-size:34px;
+  font-weight:900;
+  line-height:1.15;
+  text-shadow:0 0 14px rgba(247,183,51,.95), 0 0 28px rgba(16,71,215,.85);
+}
+
+.decorative-daisy{
+  position:absolute;
+  top:24px;
+  right:38px;
+  font-size:140px;
+  transform:rotate(14deg);
+  filter:drop-shadow(0 18px 22px rgba(7,31,73,.12));
+  z-index:1;
+}
+
+.daisy-menu{
+  position:absolute;
+  top:170px;
+  right:6%;
+  z-index:20;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.daisy-item{
+  position:relative;
+}
+
+.daisy-item button{
+  width:78px;
+  height:78px;
+  border-radius:50%;
+  border:1px solid rgba(7,31,73,.08);
+  background:rgba(255,255,255,.95);
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  font-size:42px;
+  transition:.25s ease;
+}
+
+.daisy-item button:hover{
+  transform:scale(1.08) rotate(10deg);
+}
+
+.popup{
+  position:absolute;
+  right:94px;
+  top:0;
+  width:250px;
+  padding:20px;
+  border-radius:25px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(16px);
+  box-shadow:var(--shadow);
+  opacity:0;
+  pointer-events:none;
+  transform:translateX(15px);
+  transition:.28s ease;
+  border:1px solid rgba(7,31,73,.08);
+}
+
+.daisy-item:hover .popup{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateX(0);
+}
+
+.popup strong{
+  display:block;
+  color:var(--blue);
+  margin-bottom:10px;
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+}
+
+.popup span{
+  display:block;
+  font-size:14px;
+  padding:5px 0;
+}
+
+.section{
+  padding:95px 7%;
+}
+
+.cream{
+  background:rgba(255,250,242,.75);
+}
+
+.section-heading{
+  text-align:center;
+  max-width:870px;
+  margin:0 auto 52px;
+}
+
+.section-heading p{
+  color:var(--blue);
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:13px;
+}
+
+.section-heading h2,
+.story-text h2,
+.reservation-content h2,
+.recruit-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  line-height:1.08;
+  margin-bottom:18px;
+}
+
+.section-heading span{
+  line-height:1.8;
+  color:rgba(7,31,73,.78);
+}
+
+.cards.three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(7,31,73,.06);
+  box-shadow:var(--soft-shadow);
+  border-radius:30px;
+  padding:34px;
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.card h3{
+  font-size:23px;
+  color:var(--blue);
+  margin-bottom:14px;
+}
+
+.card p{
+  line-height:1.85;
+  color:rgba(7,31,73,.82);
+}
+
+.value-card .icon{
+  display:inline-flex;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background:var(--cream);
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.story-section{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:55px;
+  align-items:center;
+}
+
+.story-text p{
+  line-height:1.9;
+  margin-bottom:18px;
+}
+
+.story-text strong{
+  display:block;
+  margin-top:22px;
+  font-size:20px;
+  color:var(--blue);
+}
+
+.story-image{
+  min-height:510px;
+  border-radius:42px;
+  background:
+    linear-gradient(120deg,rgba(7,31,73,.1),rgba(247,183,51,.08)),
+    url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1600');
+  background-size:cover;
+  background-position:center;
+  box-shadow:var(--shadow);
+}
+
+.navy-section{
+  background:var(--navy);
+  color:white;
+}
+
+.light-heading p,
+.light-heading h2,
+.light-heading span{
+  color:white;
+}
+
+.dark-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  color:white;
+}
+
+.dark-card h3,
+.dark-card p{
+  color:white;
+}
+
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.event-card{
+  min-height:350px;
+  border-radius:34px;
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  box-shadow:var(--shadow);
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.event-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,rgba(7,31,73,.92));
+}
+
+.event-card div{
+  position:relative;
+  z-index:2;
+}
+
+.event-card p{
+  font-weight:800;
+  color:var(--yellow);
+  margin-bottom:8px;
+}
+
+.event-card h3{
+  font-size:28px;
+  margin-bottom:13px;
+}
+
+.event-card span{
+  display:inline-flex;
+  background:var(--yellow);
+  color:var(--navy);
+  padding:9px 14px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+}
+
+.karaoke{
+  background-image:url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200');
+}
+
+.standup{
+  background-image:url('https://images.unsplash.com/photo-1527224538127-2104bb71c51b?q=80&w=1200');
+}
+
+.dj{
+  background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200');
+}
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.price-card{
+  background:white;
+  border-radius:26px;
+  padding:28px;
+  box-shadow:var(--soft-shadow);
+  border:1px solid rgba(7,31,73,.06);
+}
+
+.price-card h3{
+  color:var(--blue);
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.price-card p{
+  line-height:1.7;
+}
+
+.reservation-section{
+  background:var(--navy);
+  color:white;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:45px;
+  align-items:center;
+}
+
+.reservation-content p{
+  line-height:1.8;
+}
+
+.reservation-form{
+  background:var(--cream);
+  padding:32px;
+  border-radius:32px;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.reservation-form input,
+.reservation-form select{
+  padding:16px;
+  border:none;
+  border-radius:16px;
+  font-family:'Poppins',sans-serif;
+  outline:none;
+  background:white;
+  color:var(--navy);
+}
+
+.reservation-form button{
+  grid-column:1 / -1;
+  padding:17px;
+  border:none;
+  border-radius:18px;
+  background:var(--yellow);
+  color:var(--navy);
+  font-weight:900;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.reservation-form button:hover{
+  transform:translateY(-3px);
+}
+
+.recruit-section{
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(247,183,51,.22), transparent 30%),
+    radial-gradient(circle at 90% 70%, rgba(16,71,215,.12), transparent 30%),
+    var(--cream);
+}
+
+.recruit-section p{
+  max-width:760px;
+  margin:0 auto 28px;
+  line-height:1.8;
+}
+
+.contact-section{
+  padding:70px 7%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  background:var(--cream-2);
+}
+
+.contact-card{
+  background:white;
+  padding:30px;
+  border-radius:28px;
+  box-shadow:var(--soft-shadow);
+}
+
+.contact-card h3{
+  color:var(--blue);
+  margin-bottom:15px;
+  font-size:23px;
+}
+
+.contact-card p{
+  line-height:1.8;
+  margin-bottom:8px;
+}
+
+.footer{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:55px 7%;
+}
+
+.footer h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  margin-bottom:8px;
+}
+
+.footer p{
+  color:rgba(255,255,255,.82);
+}
+
+@media(max-width:1100px){
+  .nav-links{
+    display:none;
+  }
+
+  .hero,
+  .story-section,
+  .reservation-section{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:58px;
+  }
+
+  .decorative-daisy{
+    display:none;
+  }
+
+  .daisy-menu{
+    position:static;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-top:25px;
+  }
+
+  .popup{
+    right:auto;
+    left:0;
+    top:90px;
+  }
+
+  .cards.three,
+  .event-grid,
+  .price-grid,
+  .contact-section{
+    grid-template-columns:1fr;
+  }
+
+  .reservation-form{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:650px){
+  .navbar{
+    padding:14px 5%;
+  }
+
+  .brand-text{
+    font-size:18px;
+  }
+
+  .brand-flower{
+    width:48px;
+    height:48px;
+  }
+
+  .nav-button{
+    padding:12px 18px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:45px 5% 70px;
+  }
+
+  .hero h1{
+    font-size:47px;
+  }
+
+  .photo-card{
+    min-height:380px;
+  }
+
+  .photo-overlay{
+    font-size:25px;
+    right:25px;
+    top:25px;
+  }
+
+  .section{
+    padding:70px 5%;
+  }
+
+  .section-heading h2,
+  .story-text h2,
+  .reservation-content h2,
+  .recruit-section h2{
+    font-size:36px;
+  }
+}
