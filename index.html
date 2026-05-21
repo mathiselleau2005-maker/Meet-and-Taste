@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Meet and Taste</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet and Taste - Le QG des Étudiants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
 
-<body style="background:black;color:white;text-align:center;padding-top:100px;font-family:Arial;">
-  <h1>MEET & TASTE</h1>
-  <p>See you soon...</p>
+    <header>
+        <div class="logo">
+            <img src="logo_meet_and_taste.png" alt="Meet and Taste Logo">
+        </div>
+        <nav>
+            <a href="#" class="active">Accueil</a>
+            <a href="#">Le concept</a>
+            <a href="#">Événements</a>
+            <a href="#">Carte</a>
+            <a href="#">Tarifs</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button class="btn-nav"><i class="fa-regular fa-calendar"></i> Réserver une table</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <p class="subtitle">LE QG DES ÉTUDIANTS ♡</p>
+            <h1>MANGER.<br>SE RENCONTRER.<br><span class="highlight">VIVRE.</span></h1>
+            <p class="tagline">Le goût des bonnes vibes ♡</p>
+            <p class="description">
+                Un lieu convivial, accessible et éco-responsable où les étudiants se retrouvent, partagent, créent du lien et profitent de bons plats à prix réduits.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Réserver une table &rarr;</button>
+                <button class="btn-secondary">Découvrir notre univers <i class="fa-regular fa-circle-play"></i></button>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="icon">€</span>
+                    <p>Prix étudiants accessibles</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon"><i class="fa-solid fa-leaf"></i></span>
+                    <p>Éco-responsable & anti-gaspi</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon"><i class="fa-solid fa-users"></i></span>
+                    <p>Ouvert à tous, sans jugement</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon"><i class="fa-regular fa-calendar-days"></i></span>
+                    <p>Événements tous les semaines</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="image-container">
+                <img src="group_students.jpg" alt="Étudiants qui partagent un repas" class="main-img">
+                <div class="neon-text">
+                    <p>Good food</p>
+                    <p class="cyan">Good people</p>
+                    <p class="pink">Good vibes ♡</p>
+                </div>
+            </div>
+            <img src="daisy_decoration.png" alt="Fleurs décoration" class="daisy-deco">
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="card-engagement">
+            <h3><i class="fa-solid fa-leaf"></i> ENGAGÉS POUR DEMAIN</h3>
+            <p>Nous luttons contre le gaspillage alimentaire en cuisinant des invendus récupérés auprès de partenaires engagés.</p>
+            <div class="partner-logos">
+                <img src="logo_too_good.png" alt="Too Good To Go">
+                <img src="logo_banques_alim.png" alt="Banques Alimentaires">
+                <img src="logo_carrefour.png" alt="Carrefour">
+                <img src="logo_crous.png" alt="Crous">
+            </div>
+        </div>
+
+        <div class="events-section">
+            <div class="events-header">
+                <h3>ÉVÉNEMENTS À VENIR</h3>
+                <a href="#" class="see-all">Voir tout &rarr;</a>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <img src="karaoke.jpg" alt="Karaoké">
+                    <div class="event-details">
+                        <p class="event-date">JEU. 23 MAI - 21H00</p>
+                        <h4>Soirée Karaoké</h4>
+                        <p class="event-desc">Chante, amuse-toi et repars avec des cadeaux !</p>
+                        <div class="event-footer">
+                            <span class="price">À partir de 5€</span>
+                            <span class="info">1 conso incluse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="standup.jpg" alt="Stand Up">
+                    <div class="event-details">
+                        <p class="event-date">VEN. 24 MAI - 20H30</p>
+                        <h4>Stand Up Night</h4>
+                        <p class="event-desc">Des humoristes, du rire et une ambiance au top !</p>
+                        <div class="event-footer">
+                            <span class="price">À partir de 5€</span>
+                            <span class="info">1 conso incluse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="djset.jpg" alt="DJ Set">
+                    <div class="event-details">
+                        <p class="event-date">SAM. 25 MAI - 23H00</p>
+                        <h4>DJ Set Étudiant</h4>
+                        <p class="event-desc">Good music, good vibes jusqu'au bout de la nuit !</p>
+                        <div class="event-footer">
+                            <span class="price-free">Entrée gratuite</span>
+                            <span class="info">Boissons payantes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-reservation">
+            <div class="res-icon"><i class="fa-regular fa-calendar-days"></i> RÉSERVATION</div>
+            <h2>Votre table<br>vous attend !</h2>
+            <p>Réservez en quelques clics et profitez d'un moment unique entre amis.</p>
+            <button class="btn-yellow">Réserver maintenant &rarr;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-item">
+            <h4><i class="fa-regular fa-clock"></i> HORAIRES</h4>
+            <p>Lun / Mar / Mer / Dim : 10h00 - 22h00</p>
+            <p>Jeu / Ven / Sam : 11h00 - 02h30</p>
+        </div>
+        <div class="footer-item">
+            <h4><i class="fa-solid fa-location-dot"></i> NOUS TROUVER</h4>
+            <p>18 Rue des Tamaris, 77420 Champs-sur-Marne</p>
+            <p>RER A Noisy-Champs • Bus 312, 421</p>
+        </div>
+        <div class="footer-item">
+            <h4>SUIVEZ-NOUS</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-spotify"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
