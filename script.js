@@ -1,36 +1,23 @@
-const flowers =
-document.querySelectorAll(".flower-item");
+const flowers = document.querySelectorAll(".flower-link");
 
-flowers.forEach((flower)=>{
+flowers.forEach((flower) => {
+  flower.addEventListener("click", () => {
+    const targetId = flower.dataset.target;
+    const section = document.getElementById(targetId);
 
-  flower.addEventListener("click",()=>{
-
-    const targetId =
-    flower.getAttribute("data-target");
-
-    const targetSection =
-    document.getElementById(targetId);
-
-    if(targetSection){
-
-      targetSection.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       });
-
     }
-
   });
-
 });
 
-const reservationButton =
-document.getElementById("reservation-btn");
+const reservationBtn = document.getElementById("reservationBtn");
 
-reservationButton.addEventListener("click",()=>{
-
-  alert(
-    "Merci 🌼 Votre réservation a bien été prise en compte."
-  );
-
-});
+if (reservationBtn) {
+  reservationBtn.addEventListener("click", () => {
+    alert("Merci 🌼 Votre demande de réservation a bien été prise en compte.");
+  });
+}
