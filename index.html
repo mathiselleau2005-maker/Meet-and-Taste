@@ -3,62 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEET and TASTE</title>
-
+  <title>MEET and TASTE — Le QG Étudiant</title>
   <link rel="stylesheet" href="style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-<header class="navbar">
-  <a href="#accueil" class="logo">
-    <div class="logo-flower">🌼</div>
-    <div class="logo-text">
-      <strong>MEET</strong>
-      <span>and</span>
-      <strong>TASTE</strong>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">🌼</span>
+      <span class="logo-text">MEET <em>and</em> TASTE</span>
     </div>
-  </a>
-
-  <nav class="nav-links">
-    <a href="#accueil">Accueil</a>
-    <a href="#concept">Le concept</a>
-    <a href="#valeurs">Nos valeurs</a>
-    <a href="#apropos">À propos</a>
-    <a href="#evenements">Événements</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#contact">Contact</a>
+    <ul class="nav-links">
+      <li><a href="#concept">Le concept</a></li>
+      <li><a href="#events">Événements</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reservation" class="btn-nav">Réserver une table</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <a href="#reservation" class="reserve-top">Réserver une table</a>
-</header>
-
-<main>
-
-  <section id="accueil" class="hero">
+  <!-- HERO -->
+  <section class="hero" id="accueil">
     <div class="hero-left">
-      <p class="subtitle">Le QG étudiant de Champs-sur-Marne</p>
-
-      <h1>
-        Manger.<br>
-        Se rencontrer.<br>
-        <span>Vivre.</span>
+      <p class="hero-tag">✦ LE QG ÉTUDIANT DE CHAMPS-SUR-MARNE</p>
+      <h1 class="hero-title">
+        MANGER.<br>
+        SE RENCONTRER.<br>
+        <span class="yellow">VIVRE.</span>
       </h1>
-
-      <p class="hero-description">
-        Un lieu convivial, accessible et éco-responsable où les étudiants se retrouvent,
-        partagent, créent du lien et profitent de bons plats à prix réduits.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#reservation" class="btn-primary">Réserver une table</a>
+      <p class="hero-sub">Un lieu convivial, accessible et éco-responsable où les étudiants se retrouvent, partagent, créent du lien et profitent de bons plats à prix réduits.</p>
+      <div class="hero-btns">
+        <a href="#reservation" class="btn-primary">Réserver une table →</a>
         <a href="#concept" class="btn-secondary">Découvrir le concept</a>
       </div>
-
-      <div class="hero-icons">
+      <div class="hero-badges">
         <span>🌼 Prix étudiants accessibles</span>
         <span>🌱 Éco-responsable & anti-gaspi</span>
         <span>🤝 Ouvert à tous</span>
@@ -67,248 +51,382 @@
     </div>
 
     <div class="hero-right">
-      <div class="front-photo">
-        <div class="neon-text">
-          Good food<br>
-          Good people<br>
-          Good vibes
+      <!-- Slideshow façade -->
+      <div class="hero-photo-wrap">
+        <div class="facade-slideshow">
+          <img src="facade1.jpg" alt="Façade MEET and TASTE - vue soir" class="facade-img active" id="slide1" />
+          <img src="facade2.jpg" alt="Façade MEET and TASTE - vue jour" class="facade-img" id="slide2" />
+          <div class="slide-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+          </div>
         </div>
+        <div class="photo-label">Good food · Good people · Good vibes</div>
       </div>
 
-      <div class="flower-side">
-        <div class="flower-link" data-target="valeurs">
-          <div class="flower">🌼</div>
-          <span>Nos valeurs</span>
+      <!-- Marguerites interactives -->
+      <div class="daisies-column">
+        <div class="daisy-item" data-menu="valeurs">
+          <div class="daisy-svg">
+            <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="40" y1="110" x2="40" y2="60" stroke="#66713A" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="40" y1="85" x2="25" y2="70" stroke="#66713A" stroke-width="1.8" stroke-linecap="round"/>
+              <ellipse cx="33" cy="68" rx="10" ry="5" fill="#8a9a4a" transform="rotate(-30 33 68)"/>
+              <g transform="translate(40,48)">
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <circle cx="0" cy="0" r="5" fill="#e8a020"/>
+              </g>
+            </svg>
+          </div>
+          <span class="daisy-label">Nos valeurs</span>
+          <div class="daisy-popup">
+            <h4>🌼 Nos valeurs</h4>
+            <ul>
+              <li>Convivialité</li>
+              <li>Éco-responsabilité</li>
+              <li>Solidarité</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="flower-link" data-target="apropos">
-          <div class="flower">🌼</div>
-          <span>À propos</span>
+        <div class="daisy-item" data-menu="apropos">
+          <div class="daisy-svg">
+            <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="40" y1="110" x2="40" y2="60" stroke="#66713A" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="40" y1="80" x2="55" y2="65" stroke="#66713A" stroke-width="1.8" stroke-linecap="round"/>
+              <ellipse cx="47" cy="63" rx="10" ry="5" fill="#8a9a4a" transform="rotate(30 47 63)"/>
+              <g transform="translate(40,48)">
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <circle cx="0" cy="0" r="5" fill="#e8a020"/>
+              </g>
+            </svg>
+          </div>
+          <span class="daisy-label">À propos</span>
+          <div class="daisy-popup">
+            <h4>💛 À propos de nous</h4>
+            <ul>
+              <li>4 amis fondateurs</li>
+              <li>Né en 2025</li>
+              <li>Champs-sur-Marne</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="flower-link" data-target="concept">
-          <div class="flower">🌼</div>
-          <span>Le concept</span>
+        <div class="daisy-item" data-menu="concept">
+          <div class="daisy-svg">
+            <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="40" y1="110" x2="40" y2="60" stroke="#66713A" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="40" y1="88" x2="22" y2="75" stroke="#66713A" stroke-width="1.8" stroke-linecap="round"/>
+              <ellipse cx="30" cy="73" rx="10" ry="5" fill="#8a9a4a" transform="rotate(-20 30 73)"/>
+              <g transform="translate(40,48)">
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <circle cx="0" cy="0" r="5" fill="#e8a020"/>
+              </g>
+            </svg>
+          </div>
+          <span class="daisy-label">Le concept</span>
+          <div class="daisy-popup">
+            <h4>🏠 Le concept</h4>
+            <ul>
+              <li>Restaurant</li>
+              <li>Coworking</li>
+              <li>Bar étudiant</li>
+              <li>Événements</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="flower-link" data-target="evenements">
-          <div class="flower">🌼</div>
-          <span>Événements</span>
+        <div class="daisy-item" data-menu="events">
+          <div class="daisy-svg">
+            <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
+              <line x1="40" y1="110" x2="40" y2="60" stroke="#66713A" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="40" y1="82" x2="58" y2="68" stroke="#66713A" stroke-width="1.8" stroke-linecap="round"/>
+              <ellipse cx="50" cy="66" rx="10" ry="5" fill="#8a9a4a" transform="rotate(35 50 66)"/>
+              <g transform="translate(40,48)">
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-18" rx="7" ry="12" fill="white" opacity="0.95" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="8" fill="#F7B733"/>
+                <circle cx="0" cy="0" r="5" fill="#e8a020"/>
+              </g>
+            </svg>
+          </div>
+          <span class="daisy-label">Événements</span>
+          <div class="daisy-popup">
+            <h4>🎉 Événements</h4>
+            <ul>
+              <li>Karaoké</li>
+              <li>Stand Up Night</li>
+              <li>DJ Set Étudiant</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="valeurs" class="values-card-section">
-    <div class="values-card">
-      <h2>Nos valeurs</h2>
-
-      <div class="values-grid">
-        <div>
-          <h3>🤝 Convivial</h3>
-          <p>Un lieu où l’on peut se retrouver, échanger et créer du lien sans jugement.</p>
+  <!-- VALEURS -->
+  <section class="valeurs" id="valeurs">
+    <div class="container">
+      <div class="valeurs-grid">
+        <div class="val-card">
+          <span class="val-icon">🌼</span>
+          <h3>Convivial</h3>
+          <p>Un lieu où l'on peut se retrouver, échanger et créer du lien sans jugement.</p>
         </div>
-
-        <div>
-          <h3>🌱 Éco-responsable</h3>
+        <div class="val-card">
+          <span class="val-icon">🌱</span>
+          <h3>Éco-responsable</h3>
           <p>Nous récupérons des invendus pour lutter contre le gaspillage alimentaire.</p>
         </div>
-
-        <div>
-          <h3>💛 Solidaire</h3>
-          <p>Nous recrutons des alternants, jobs étudiants, saisonniers et stagiaires.</p>
+        <div class="val-card">
+          <span class="val-icon">💛</span>
+          <h3>Solidaire</h3>
+          <p>Alternants, jobs étudiants, saisonniers et stages — tous les parcours sont accueillis.</p>
         </div>
-
-        <div>
-          <h3>🎓 Étudiant avant tout</h3>
-          <p>Tout est pensé pour la vie étudiante : prix, ambiance, espaces et événements.</p>
+        <div class="val-card">
+          <span class="val-icon">🎓</span>
+          <h3>Étudiant avant tout</h3>
+          <p>Tout est pensé pour la vie étudiante : prix, ambiance et événements.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="concept" class="section concept-section">
-    <div class="concept-box">
-      <div>
-        <p class="section-label">Le concept</p>
-        <h2>Bien plus qu’un restaurant étudiant</h2>
-
-        <p>
-          MEET and TASTE est un QG étudiant pensé pour manger, travailler, sortir,
-          se rencontrer et participer à des événements dans une ambiance chaleureuse et inspirante.
-        </p>
-
-        <ul>
-          <li>✔ Cuisine faite maison à prix réduits</li>
-          <li>✔ Produits frais & anti-gaspi</li>
-          <li>✔ Espaces pour travailler ou chiller</li>
-          <li>✔ Événements toutes les semaines</li>
+  <!-- CONCEPT -->
+  <section class="concept" id="concept">
+    <div class="container concept-inner">
+      <div class="concept-text">
+        <p class="section-tag">✦ Notre concept</p>
+        <h2>Bien plus qu'un restaurant étudiant</h2>
+        <p class="concept-desc">MEET and TASTE est un lieu hybride : restaurant, coworking, bar étudiant et espace événementiel.</p>
+        <ul class="concept-list">
+          <li>✔ Cuisine à prix réduits</li>
+          <li>✔ Produits anti-gaspi</li>
+          <li>✔ Coworking étudiant</li>
+          <li>✔ Événements chaque semaine</li>
         </ul>
       </div>
-
-      <div class="concept-photo"></div>
-    </div>
-  </section>
-
-  <section id="evenements" class="section events-section">
-    <div class="section-title-row">
-      <div>
-        <p class="section-label">Événements à venir</p>
-        <h2>Des moments pour se retrouver</h2>
+      <div class="concept-image">
+        <div class="concept-img-wrap">
+          <img src="facade2.jpg" alt="Ambiance Meet and Taste" />
+          <div class="concept-img-overlay"></div>
+        </div>
       </div>
-      <a href="#reservation">Voir tout →</a>
-    </div>
-
-    <div class="events-grid">
-      <article class="event-card event-one">
-        <span>Jeu. 23 mai • 21h00</span>
-        <h3>Soirée Karaoké</h3>
-        <p>Chante, amuse-toi et repars avec des cadeaux.</p>
-        <strong>À partir de 5€</strong>
-        <small>1 conso incluse</small>
-      </article>
-
-      <article class="event-card event-two">
-        <span>Ven. 24 mai • 20h30</span>
-        <h3>Stand Up Night</h3>
-        <p>Des humoristes, du rire et une ambiance au top.</p>
-        <strong>À partir de 5€</strong>
-        <small>1 conso incluse</small>
-      </article>
-
-      <article class="event-card event-three">
-        <span>Sam. 25 mai • 23h00</span>
-        <h3>DJ Set Étudiant</h3>
-        <p>Good music, good vibes jusqu’au bout de la nuit.</p>
-        <strong>Entrée gratuite</strong>
-        <small>Boissons payantes</small>
-      </article>
     </div>
   </section>
 
-  <section id="tarifs" class="section price-reservation">
-    <div class="price-card">
-      <p class="section-label">Tarifs étudiants</p>
+  <!-- ÉVÉNEMENTS -->
+  <section class="events" id="events">
+    <div class="container">
+      <p class="section-tag light">✦ À venir</p>
+      <h2 class="events-title">Événements</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-glow pink"></div>
+          <span class="event-badge">🎤 Karaoké</span>
+          <h3>Soirée Karaoké</h3>
+          <p>Chante, amuse-toi et repars avec des cadeaux !</p>
+          <div class="event-price">À partir de 5€</div>
+          <div class="event-info">1 conso incluse</div>
+        </div>
+        <div class="event-card">
+          <div class="event-glow purple"></div>
+          <span class="event-badge">🎭 Stand Up</span>
+          <h3>Stand Up Night</h3>
+          <p>Des humoristes, du rire et une ambiance au top !</p>
+          <div class="event-price">À partir de 5€</div>
+          <div class="event-info">1 conso incluse</div>
+        </div>
+        <div class="event-card">
+          <div class="event-glow blue"></div>
+          <span class="event-badge">🎵 DJ Set</span>
+          <h3>DJ Set Étudiant</h3>
+          <p>Good music, good vibes jusqu'au bout de la nuit !</p>
+          <div class="event-price free">Entrée gratuite</div>
+          <div class="event-info">Boissons payantes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="tarifs" id="tarifs">
+    <div class="container">
+      <p class="section-tag">✦ Nos prix</p>
       <h2>Des prix pensés pour les étudiants</h2>
-
-      <div class="price-line">
-        <span>Menu étudiant</span>
-        <strong>10€</strong>
+      <div class="tarifs-card">
+        <div class="tarif-line">
+          <span>Menu étudiant</span>
+          <span class="tarif-price">10€</span>
+        </div>
+        <div class="tarif-sep"></div>
+        <div class="tarif-line">
+          <span>Boissons</span>
+          <span class="tarif-price">à partir de 3€</span>
+        </div>
+        <div class="tarif-sep"></div>
+        <div class="tarif-line">
+          <span>Karaoké / Stand Up</span>
+          <span class="tarif-price">à partir de 5€</span>
+        </div>
+        <div class="tarif-sep"></div>
+        <div class="tarif-line">
+          <span>DJ Set</span>
+          <span class="tarif-price free-tag">Entrée gratuite</span>
+        </div>
+        <div class="tarif-promo">
+          🌼 Groupe de 4 personnes et + = <strong>−10%</strong>
+        </div>
       </div>
-
-      <div class="price-line">
-        <span>Boissons</span>
-        <strong>À partir de 3€</strong>
-      </div>
-
-      <div class="price-line">
-        <span>Suppléments</span>
-        <strong>2€ à 4€</strong>
-      </div>
-
-      <div class="price-line">
-        <span>Karaoké / Stand-up</span>
-        <strong>À partir de 5€</strong>
-      </div>
-
-      <div class="price-line">
-        <span>Soirées DJ</span>
-        <strong>Entrée gratuite</strong>
-      </div>
-
-      <div class="discount-box">
-        Groupe de 4 et + <strong>-10%</strong> sur l’addition
-      </div>
-    </div>
-
-    <div id="reservation" class="reservation-card">
-      <p>Réservation</p>
-      <h2>Votre table <span>vous attend !</span></h2>
-
-      <form>
-        <input type="text" placeholder="Nom complet">
-        <input type="tel" placeholder="Téléphone">
-        <input type="email" placeholder="Email">
-        <input type="number" placeholder="Nombre de personnes">
-        <select>
-          <option>Restaurant</option>
-          <option>Groupe</option>
-          <option>Soirée</option>
-          <option>Événement</option>
-        </select>
-        <button type="button" id="reservationBtn">Réserver maintenant</button>
-      </form>
     </div>
   </section>
 
-  <section id="apropos" class="section about-section">
-    <div class="about-text">
-      <p class="section-label">À propos de nous</p>
-      <h2>4 amis. 1 constat. 1 mission.</h2>
-
-      <p>
-        Nous étions 4 amis d’études avec des parcours différents. Pourtant, le constat était le même :
-        on galérait tous. Quand on voulait sortir, tout était loin, souvent sur Paris.
-      </p>
-
-      <p>
-        Nos résidences étudiantes et nos CROUS étaient en banlieue parisienne, mais il manquait
-        un vrai lieu pour manger, réviser, se retrouver et souffler.
-      </p>
-
-      <p>
-        Alors nous avons créé MEET and TASTE : un QG étudiant où l’on peut manger sans se ruiner,
-        travailler, rencontrer du monde et vivre pleinement sa vie étudiante.
-      </p>
-    </div>
-
-    <div class="about-photo"></div>
-  </section>
-
-  <section class="section eco-section">
-    <p class="section-label">Notre engagement</p>
-    <h2>Pour les étudiants, pour la planète.</h2>
-
-    <p>
-      Nous luttons contre le gaspillage alimentaire en cuisinant des invendus récupérés auprès de partenaires engagés :
-      Too Good To Go, banques alimentaires, Carrefour, CROUS et autres acteurs solidaires.
-    </p>
-  </section>
-
-  <section id="recrutement" class="recruit-section">
-    <div>
-      <h2>Rejoins l’aventure !</h2>
-      <p>Nous recrutons des alternants, jobs étudiants et saisonniers.</p>
-    </div>
-    <a href="#contact">Voir les offres d’emploi →</a>
-  </section>
-
-  <section id="contact" class="footer-infos">
-    <div>
-      <h3>Horaires</h3>
-      <p>Lun / Mar / Mer / Dim<br>10h00 – 22h00</p>
-      <p>Jeu / Ven / Sam<br>11h00 – 02h30</p>
-    </div>
-
-    <div>
-      <h3>Nous trouver</h3>
-      <p>18 Rue des Tamaris<br>77420 Champs-sur-Marne</p>
-      <p>RER A Noisy-Champs • Bus 312, 421</p>
-    </div>
-
-    <div>
-      <h3>Suivez-nous</h3>
-      <p>Instagram • TikTok • Facebook • Snapchat</p>
-      <p>Ouverture Mars 2027 🌼</p>
+  <!-- RÉSERVATION -->
+  <section class="reservation" id="reservation">
+    <div class="container">
+      <div class="resa-card">
+        <div class="resa-left">
+          <p class="section-tag light">✦ Réservation</p>
+          <h2>Votre table vous attend 🌼</h2>
+          <p>Réservez une table, un espace groupe ou une soirée en quelques clics.</p>
+        </div>
+        <div class="resa-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nom complet</label>
+              <input type="text" placeholder="Votre nom" />
+            </div>
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" placeholder="06 00 00 00 00" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="votre@email.fr" />
+            </div>
+            <div class="form-group">
+              <label>Nombre de personnes</label>
+              <input type="number" placeholder="2" min="1" />
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Type de réservation</label>
+            <select>
+              <option>Table classique</option>
+              <option>Espace groupe</option>
+              <option>Soirée événement</option>
+              <option>Coworking</option>
+            </select>
+          </div>
+          <button class="btn-resa" type="button">Réserver maintenant →</button>
+        </div>
+      </div>
     </div>
   </section>
 
-</main>
+  <!-- À PROPOS -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-tag">✦ Notre histoire</p>
+        <h2>4 amis. 1 constat. 1 mission.</h2>
+        <p>Nous étions 4 amis étudiants avec des parcours différents. Pourtant, le constat était toujours le même : solitude, transports compliqués, cafés trop chers et manque de lieux étudiants en banlieue parisienne.</p>
+        <p class="about-quote">Alors nous avons créé le lieu que nous aurions aimé avoir : <strong>un vrai QG étudiant.</strong></p>
+        <p class="about-tagline">MEET and TASTE : manger et se rencontrer. 🌼</p>
+      </div>
+      <div class="about-photos">
+        <img src="facade1.jpg" alt="Meet and Taste façade nuit" class="about-img img1" />
+        <img src="facade2.jpg" alt="Meet and Taste façade jour" class="about-img img2" />
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  <p><strong>MEET and TASTE</strong> — Le goût des bonnes vibes</p>
-</footer>
+  <!-- ÉCO-RESPONSABLE -->
+  <section class="eco" id="eco">
+    <div class="container">
+      <p class="section-tag">✦ Notre engagement</p>
+      <h2>Pour les étudiants, pour la planète.</h2>
+      <p class="eco-desc">Nous luttons contre le gaspillage alimentaire en cuisinant des invendus récupérés auprès de partenaires engagés.</p>
+      <div class="eco-logos">
+        <div class="eco-logo">
+          <div class="eco-logo-badge tgtg">Too Good To Go</div>
+        </div>
+        <div class="eco-logo">
+          <div class="eco-logo-badge carrefour">Carrefour</div>
+        </div>
+        <div class="eco-logo">
+          <div class="eco-logo-badge crous">CROUS</div>
+        </div>
+        <div class="eco-logo">
+          <div class="eco-logo-badge banques">Banques Alimentaires</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>🕐 Horaires</h4>
+        <p><strong>Lun / Mar / Mer / Dim</strong><br>10h00 — 22h00</p>
+        <p><strong>Jeu / Ven / Sam</strong><br>11h00 — 02h30</p>
+      </div>
+      <div class="footer-col center">
+        <div class="footer-logo">🌼 MEET <em>and</em> TASTE</div>
+        <p class="footer-tagline">Le goût des bonnes vibes</p>
+        <p class="footer-opening">Ouverture Mars 2027 🌼</p>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col right">
+        <h4>📍 Nous trouver</h4>
+        <p>18 Rue des Tamaris<br>77420 Champs-sur-Marne</p>
+        <p class="footer-transport">RER A Noisy-Champs<br>Bus 312, 421</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      MEET and TASTE — Le goût des bonnes vibes · © 2027
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
