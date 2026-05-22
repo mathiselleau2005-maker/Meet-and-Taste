@@ -2,15 +2,12 @@
 
 :root{
   --cream:#fff6e8;
-  --cream2:#fffaf2;
   --navy:#071f49;
   --blue:#1047d7;
   --yellow:#f7b733;
-  --green:#65762c;
   --white:#ffffff;
 
-  --shadow:0 18px 45px rgba(7,31,73,.12);
-  --soft-shadow:0 10px 30px rgba(7,31,73,.08);
+  --shadow:0 20px 50px rgba(7,31,73,.12);
 }
 
 *{
@@ -27,6 +24,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:var(--cream);
   color:var(--navy);
+  overflow-x:hidden;
 }
 
 .site{
@@ -40,14 +38,14 @@ body{
   top:0;
   z-index:50;
 
-  padding:20px 7%;
-
-  background:rgba(255,246,232,.92);
-  backdrop-filter:blur(16px);
-
   display:flex;
   align-items:center;
   justify-content:space-between;
+
+  padding:20px 7%;
+
+  background:rgba(255,246,232,.95);
+  backdrop-filter:blur(16px);
 
   border-bottom:1px solid rgba(7,31,73,.06);
 }
@@ -55,12 +53,12 @@ body{
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
 }
 
 .logo-flower{
-  width:58px;
-  height:58px;
+  width:60px;
+  height:60px;
 
   border-radius:50%;
 
@@ -69,9 +67,10 @@ body{
   justify-content:center;
 
   background:white;
-  box-shadow:var(--soft-shadow);
 
-  font-size:34px;
+  font-size:35px;
+
+  box-shadow:var(--shadow);
 }
 
 .logo-text{
@@ -83,8 +82,8 @@ body{
 .logo-text span{
   display:block;
   color:var(--blue);
-  font-style:italic;
   font-size:18px;
+  font-style:italic;
 }
 
 .nav-links{
@@ -106,18 +105,14 @@ body{
 .reserve-btn{
   background:var(--navy);
   color:white;
+
   text-decoration:none;
 
   padding:16px 28px;
+
   border-radius:999px;
 
   font-weight:700;
-
-  transition:.25s;
-}
-
-.reserve-btn:hover{
-  transform:translateY(-3px);
 }
 
 /* HERO */
@@ -127,22 +122,22 @@ body{
 
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
 
+  gap:60px;
   align-items:center;
 }
 
 .subtitle{
   color:var(--blue);
   font-weight:800;
-  letter-spacing:1px;
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
   font-size:88px;
   line-height:.9;
+
   margin-bottom:30px;
 }
 
@@ -153,22 +148,29 @@ body{
 .hero-text{
   font-size:18px;
   line-height:1.9;
-  max-width:640px;
+
   margin-bottom:35px;
+
+  max-width:620px;
 }
 
 .hero-buttons{
   display:flex;
   gap:18px;
-  margin-bottom:28px;
+
+  margin-bottom:30px;
 }
 
 .primary-btn,
 .secondary-btn{
   text-decoration:none;
-  padding:18px 28px;
+
+  padding:18px 30px;
+
   border-radius:999px;
+
   font-weight:700;
+
   transition:.25s;
 }
 
@@ -180,7 +182,6 @@ body{
 .secondary-btn{
   background:white;
   color:var(--navy);
-  border:1px solid rgba(7,31,73,.1);
 }
 
 .primary-btn:hover,
@@ -190,30 +191,36 @@ body{
 
 .hero-tags{
   display:flex;
-  gap:14px;
   flex-wrap:wrap;
+  gap:14px;
 }
 
 .tag{
   background:white;
-  padding:13px 18px;
+
+  padding:12px 18px;
+
   border-radius:999px;
-  box-shadow:var(--soft-shadow);
+
   font-weight:600;
+
+  box-shadow:var(--shadow);
 }
+
+/* IMAGE */
 
 .hero-right{
   position:relative;
 }
 
 .hero-image{
-  min-height:620px;
+  min-height:650px;
 
-  border-radius:42px;
+  border-radius:45px;
 
   background:
-  linear-gradient(rgba(7,31,73,.15),rgba(7,31,73,.15)),
-  url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600');
+  linear-gradient(rgba(7,31,73,.12),rgba(7,31,73,.12)),
+  url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600');
 
   background-size:cover;
   background-position:center;
@@ -225,25 +232,29 @@ body{
 
 .overlay-text{
   position:absolute;
-  top:45px;
-  right:45px;
+
+  top:40px;
+  right:40px;
 
   color:white;
-  font-size:42px;
+
+  font-size:44px;
   font-weight:800;
-  line-height:1.1;
 
   text-align:right;
 
-  text-shadow:0 0 15px rgba(247,183,51,.9);
+  line-height:1.1;
+
+  text-shadow:0 0 18px rgba(247,183,51,.9);
 }
 
 /* FLOWERS */
 
 .flower-menu{
   position:absolute;
-  right:-120px;
-  top:30px;
+
+  top:40px;
+  right:-150px;
 
   display:flex;
   flex-direction:column;
@@ -253,19 +264,20 @@ body{
 .flower-item{
   position:relative;
 
-  width:90px;
-  height:90px;
+  width:95px;
+  height:95px;
 
   border-radius:50%;
 
   background:white;
-  box-shadow:var(--shadow);
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:44px;
+  font-size:48px;
+
+  box-shadow:var(--shadow);
 
   cursor:pointer;
 
@@ -279,19 +291,21 @@ body{
 .flower-popup{
   position:absolute;
 
-  right:110px;
+  right:115px;
   top:0;
 
   width:250px;
 
   background:white;
-  padding:22px;
+
+  padding:24px;
 
   border-radius:24px;
 
   box-shadow:var(--shadow);
 
   opacity:0;
+
   pointer-events:none;
 
   transition:.25s;
@@ -303,43 +317,49 @@ body{
 
 .flower-popup strong{
   display:block;
-  margin-bottom:12px;
+
+  margin-bottom:14px;
+
   color:var(--blue);
+
   font-size:22px;
 }
 
 .flower-popup span{
   display:block;
-  margin:6px 0;
+  margin:8px 0;
 }
 
-/* MINI VALUES */
+/* VALUES */
 
 .values-strip{
   padding:0 7% 90px;
 
   display:grid;
   grid-template-columns:repeat(4,1fr);
+
   gap:22px;
 }
 
 .value-mini-card{
   background:white;
-  padding:30px;
-  border-radius:28px;
-  box-shadow:var(--soft-shadow);
+
+  padding:32px;
+
+  border-radius:30px;
+
+  box-shadow:var(--shadow);
 }
 
 .value-mini-card h3{
-  margin-bottom:15px;
-  color:var(--navy);
+  margin-bottom:18px;
 }
 
 .value-mini-card p{
-  line-height:1.8;
+  line-height:1.9;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
   padding:100px 7%;
@@ -352,9 +372,10 @@ body{
 
 .section-title p{
   color:var(--blue);
+
   font-weight:800;
-  text-transform:uppercase;
-  margin-bottom:16px;
+
+  margin-bottom:18px;
 }
 
 .section-title h2{
@@ -362,132 +383,34 @@ body{
   font-size:64px;
 }
 
-/* CONCEPT */
-
-.concept-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:26px;
-}
-
-.concept-card,
-.event-card,
-.prices-card{
-  background:white;
-  border-radius:32px;
-  padding:35px;
-  box-shadow:var(--soft-shadow);
-}
-
-.concept-card h3,
-.event-card h3,
-.prices-card h3{
-  font-size:30px;
-  margin-bottom:22px;
-}
-
-.concept-card p{
-  line-height:1.9;
-  margin-bottom:22px;
-}
-
-.concept-card ul{
-  list-style:none;
-}
-
-.concept-card li{
-  margin:10px 0;
-}
-
-.concept-image{
-  min-height:380px;
-
-  border-radius:32px;
-
-  background:
-  linear-gradient(rgba(7,31,73,.2),rgba(7,31,73,.2)),
-  url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600');
-
-  background-size:cover;
-  background-position:center;
-}
-
-.event-line,
-.price-line{
-  display:flex;
-  justify-content:space-between;
-  margin:18px 0;
-}
-
-.price-line strong{
-  background:var(--yellow);
-  padding:6px 14px;
-  border-radius:999px;
-}
-
-.student-card{
-  margin-top:28px;
-  background:var(--cream2);
-  padding:18px;
-  border-radius:18px;
-  font-weight:700;
-}
-
-/* BIG VALUES */
-
-.big-values{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-
-.big-value-card{
-  background:white;
-  border-radius:32px;
-  padding:40px;
-  box-shadow:var(--soft-shadow);
-}
-
-.big-value-card h3{
-  margin-bottom:18px;
-  font-size:28px;
-}
-
-.big-value-card p{
-  line-height:1.9;
-}
-
 /* STORY */
 
 .story-section{
   display:grid;
   grid-template-columns:1fr 1fr;
+
   gap:50px;
   align-items:center;
 }
 
-.story-left p:first-child{
-  color:var(--blue);
-  font-weight:800;
-  margin-bottom:20px;
-}
-
 .story-left h2{
   font-family:'Playfair Display',serif;
+
   font-size:72px;
+
   line-height:1;
-  margin-bottom:30px;
+
+  margin-bottom:28px;
 }
 
 .story-text{
   line-height:1.9;
-  margin-bottom:18px;
 }
 
 .story-image{
-  min-height:600px;
+  min-height:620px;
 
-  border-radius:38px;
+  border-radius:40px;
 
   background:
   linear-gradient(rgba(7,31,73,.15),rgba(7,31,73,.15)),
@@ -507,11 +430,14 @@ body{
 
 .reservation-box{
   background:var(--navy);
+
   border-radius:40px;
+
   padding:55px;
 
   display:grid;
   grid-template-columns:1fr 1fr;
+
   gap:40px;
 
   color:white;
@@ -521,39 +447,32 @@ body{
 
 .reservation-left p{
   color:var(--yellow);
-  font-weight:700;
+
   margin-bottom:18px;
+
+  font-weight:700;
 }
 
 .reservation-left h2{
   font-family:'Playfair Display',serif;
-  font-size:58px;
-  margin-bottom:20px;
-}
 
-.reservation-left span{
-  line-height:1.9;
-  display:block;
+  font-size:58px;
 }
 
 .reservation-right{
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:18px;
 }
 
-.reservation-right input,
-.reservation-right select{
+.reservation-right input{
   padding:18px;
-  border:none;
-  border-radius:18px;
-  font-family:'Poppins',sans-serif;
-}
 
-.double-input{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+  border:none;
+
+  border-radius:18px;
+
+  font-family:'Poppins',sans-serif;
 }
 
 #reservation-btn{
@@ -567,81 +486,27 @@ body{
   border-radius:18px;
 
   font-weight:800;
+
   cursor:pointer;
-
-  transition:.25s;
-}
-
-#reservation-btn:hover{
-  transform:translateY(-3px);
-}
-
-/* RECRUTEMENT */
-
-.recruit-section{
-  padding:0 7% 100px;
-}
-
-.recruit-card{
-  background:var(--navy);
-  color:white;
-
-  border-radius:32px;
-  padding:45px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.recruit-card p{
-  color:var(--yellow);
-  font-weight:700;
-  margin-bottom:12px;
-}
-
-.recruit-card h2{
-  max-width:700px;
-  font-size:42px;
-}
-
-.recruit-card a{
-  background:var(--yellow);
-  color:var(--navy);
-
-  text-decoration:none;
-
-  padding:18px 28px;
-  border-radius:999px;
-
-  font-weight:800;
 }
 
 /* FOOTER */
 
 footer{
   background:white;
+
   padding:70px 7%;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
+
   gap:30px;
 }
 
 .footer-grid h3{
   margin-bottom:20px;
-  font-size:28px;
-}
-
-.footer-grid p{
-  line-height:1.9;
-  margin-bottom:18px;
-}
-
-.footer-grid span{
-  line-height:1.8;
 }
 
 /* RESPONSIVE */
@@ -658,12 +523,6 @@ footer{
     right:-20px;
   }
 
-  .values-strip,
-  .big-values,
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
 }
 
 @media(max-width:850px){
@@ -676,13 +535,7 @@ footer{
     font-size:58px;
   }
 
-  .section-title h2{
-    font-size:46px;
-  }
-
-  .concept-grid,
   .values-strip,
-  .big-values,
   .footer-grid{
     grid-template-columns:1fr;
   }
