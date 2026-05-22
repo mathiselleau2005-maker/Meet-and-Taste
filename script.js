@@ -1,38 +1,66 @@
-// script.js
+const flowers = document.querySelectorAll(".flower-item");
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+flowers.forEach((flower) => {
 
-    link.addEventListener('click', function(e){
+  flower.addEventListener("click", () => {
 
-        e.preventDefault();
+    const targetId = flower.getAttribute("data-target");
 
-        const target = document.querySelector(this.getAttribute('href'));
+    const targetSection =
+    document.getElementById(targetId);
 
-        if(target){
+    if(targetSection){
 
-            window.scrollTo({
-                top: target.offsetTop - 90,
-                behavior:'smooth'
-            });
+      targetSection.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
 
-        }
-
-    });
-
-});
-
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector(".header");
-
-    if(window.scrollY > 50){
-        header.style.padding = "14px 7%";
-    }else{
-        header.style.padding = "20px 7%";
     }
 
+  });
+
 });
 
+const reservationButton =
+document.getElementById("reservation-btn");
 
-console.log("MEET and TASTE lancé 🌼");
+reservationButton.addEventListener("click", () => {
+
+  alert(
+    "Merci 🌼 Votre réservation a bien été prise en compte."
+  );
+
+});
+
+/* apparition douce au scroll */
+
+const sections =
+document.querySelectorAll(
+  ".section, .values-strip, .reservation-section, .recruit-section"
+);
+
+const observer =
+new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show-section");
+
+    }
+
+  });
+
+},{
+  threshold:0.15
+});
+
+sections.forEach((section) => {
+
+  section.classList.add("hidden-section");
+
+  observer.observe(section);
+
+});
