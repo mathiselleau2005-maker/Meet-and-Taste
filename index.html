@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEET and TASTE</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,344 +13,302 @@
 
 <body>
 
-<div class="site">
-
 <header class="navbar">
-
-  <div class="logo">
-
+  <a href="#accueil" class="logo">
     <div class="logo-flower">🌼</div>
-
     <div class="logo-text">
       <strong>MEET</strong>
       <span>and</span>
       <strong>TASTE</strong>
     </div>
-
-  </div>
+  </a>
 
   <nav class="nav-links">
-
-    <a href="#concept">Concept</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#concept">Le concept</a>
     <a href="#valeurs">Nos valeurs</a>
     <a href="#apropos">À propos</a>
     <a href="#evenements">Événements</a>
     <a href="#tarifs">Tarifs</a>
-    <a href="#reservation">Réservation</a>
     <a href="#contact">Contact</a>
-
   </nav>
 
-  <a href="#reservation" class="reserve-btn">
-    Réserver
-  </a>
-
+  <a href="#reservation" class="reserve-top">Réserver une table</a>
 </header>
 
-<section class="hero">
+<main>
 
-  <div class="hero-left">
+  <section id="accueil" class="hero">
+    <div class="hero-left">
+      <p class="subtitle">Le QG étudiant de Champs-sur-Marne</p>
 
-    <p class="subtitle">
-      LE QG ÉTUDIANT DE CHAMPS-SUR-MARNE
-    </p>
+      <h1>
+        Manger.<br>
+        Se rencontrer.<br>
+        <span>Vivre.</span>
+      </h1>
 
-    <h1>
-      MANGER.<br>
-      SE RENCONTRER.<br>
-      <span>VIVRE.</span>
-    </h1>
+      <p class="hero-description">
+        Un lieu convivial, accessible et éco-responsable où les étudiants se retrouvent,
+        partagent, créent du lien et profitent de bons plats à prix réduits.
+      </p>
 
-    <p class="hero-text">
-      MEET and TASTE est un lieu convivial, accessible et éco-responsable pensé pour les étudiants.
-      Un endroit pour manger à prix réduits, travailler, sortir, rencontrer du monde et profiter de vraies bonnes vibes.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#reservation" class="primary-btn">
-        Réserver une table
-      </a>
-
-      <a href="#concept" class="secondary-btn">
-        Découvrir le concept
-      </a>
-
-    </div>
-
-    <div class="hero-tags">
-
-      <div class="tag">🌼 Prix étudiants</div>
-      <div class="tag">🌱 Anti-gaspi</div>
-      <div class="tag">🎤 Karaoké</div>
-      <div class="tag">🎧 DJ set</div>
-
-    </div>
-
-  </div>
-
-  <div class="hero-right">
-
-    <div class="hero-image">
-
-      <div class="overlay-text">
-        Good food<br>
-        Good people<br>
-        Good vibes
+      <div class="hero-buttons">
+        <a href="#reservation" class="btn-primary">Réserver une table</a>
+        <a href="#concept" class="btn-secondary">Découvrir le concept</a>
       </div>
 
+      <div class="hero-icons">
+        <span>🌼 Prix étudiants accessibles</span>
+        <span>🌱 Éco-responsable & anti-gaspi</span>
+        <span>🤝 Ouvert à tous</span>
+        <span>🎉 Événements toutes les semaines</span>
+      </div>
     </div>
 
-    <div class="flower-menu">
+    <div class="hero-right">
+      <div class="front-photo">
+        <div class="neon-text">
+          Good food<br>
+          Good people<br>
+          Good vibes
+        </div>
+      </div>
 
-      <div class="flower-item" data-target="valeurs">
-
-        🌼
-
-        <div class="flower-popup">
-
-          <strong>Nos valeurs</strong>
-
-          <span>Convivialité</span>
-          <span>Éco-responsabilité</span>
-          <span>Solidarité</span>
-
+      <div class="flower-side">
+        <div class="flower-link" data-target="valeurs">
+          <div class="flower">🌼</div>
+          <span>Nos valeurs</span>
         </div>
 
-      </div>
-
-      <div class="flower-item" data-target="apropos">
-
-        🌼
-
-        <div class="flower-popup">
-
-          <strong>À propos de nous</strong>
-
-          <span>Notre histoire</span>
-          <span>Notre mission</span>
-          <span>Notre équipe</span>
-
+        <div class="flower-link" data-target="apropos">
+          <div class="flower">🌼</div>
+          <span>À propos</span>
         </div>
 
-      </div>
+        <div class="flower-link" data-target="concept">
+          <div class="flower">🌼</div>
+          <span>Le concept</span>
+        </div>
 
-      <div class="flower-item" data-target="concept">
-
-        🌼
-
-        <div class="flower-popup">
-
-          <strong>Concept</strong>
-
-          <span>Restaurant</span>
-          <span>Coworking</span>
+        <div class="flower-link" data-target="evenements">
+          <div class="flower">🌼</div>
           <span>Événements</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="valeurs" class="values-card-section">
+    <div class="values-card">
+      <h2>Nos valeurs</h2>
+
+      <div class="values-grid">
+        <div>
+          <h3>🤝 Convivial</h3>
+          <p>Un lieu où l’on peut se retrouver, échanger et créer du lien sans jugement.</p>
         </div>
 
-      </div>
-
-      <div class="flower-item" data-target="evenements">
-
-        🌼
-
-        <div class="flower-popup">
-
-          <strong>Événements</strong>
-
-          <span>Karaoké</span>
-          <span>Stand up</span>
-          <span>DJ set</span>
-
+        <div>
+          <h3>🌱 Éco-responsable</h3>
+          <p>Nous récupérons des invendus pour lutter contre le gaspillage alimentaire.</p>
         </div>
 
+        <div>
+          <h3>💛 Solidaire</h3>
+          <p>Nous recrutons des alternants, jobs étudiants, saisonniers et stagiaires.</p>
+        </div>
+
+        <div>
+          <h3>🎓 Étudiant avant tout</h3>
+          <p>Tout est pensé pour la vie étudiante : prix, ambiance, espaces et événements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concept" class="section concept-section">
+    <div class="concept-box">
+      <div>
+        <p class="section-label">Le concept</p>
+        <h2>Bien plus qu’un restaurant étudiant</h2>
+
+        <p>
+          MEET and TASTE est un QG étudiant pensé pour manger, travailler, sortir,
+          se rencontrer et participer à des événements dans une ambiance chaleureuse et inspirante.
+        </p>
+
+        <ul>
+          <li>✔ Cuisine faite maison à prix réduits</li>
+          <li>✔ Produits frais & anti-gaspi</li>
+          <li>✔ Espaces pour travailler ou chiller</li>
+          <li>✔ Événements toutes les semaines</li>
+        </ul>
       </div>
 
+      <div class="concept-photo"></div>
+    </div>
+  </section>
+
+  <section id="evenements" class="section events-section">
+    <div class="section-title-row">
+      <div>
+        <p class="section-label">Événements à venir</p>
+        <h2>Des moments pour se retrouver</h2>
+      </div>
+      <a href="#reservation">Voir tout →</a>
     </div>
 
-  </div>
+    <div class="events-grid">
+      <article class="event-card event-one">
+        <span>Jeu. 23 mai • 21h00</span>
+        <h3>Soirée Karaoké</h3>
+        <p>Chante, amuse-toi et repars avec des cadeaux.</p>
+        <strong>À partir de 5€</strong>
+        <small>1 conso incluse</small>
+      </article>
 
-</section>
+      <article class="event-card event-two">
+        <span>Ven. 24 mai • 20h30</span>
+        <h3>Stand Up Night</h3>
+        <p>Des humoristes, du rire et une ambiance au top.</p>
+        <strong>À partir de 5€</strong>
+        <small>1 conso incluse</small>
+      </article>
 
-<section class="values-strip">
+      <article class="event-card event-three">
+        <span>Sam. 25 mai • 23h00</span>
+        <h3>DJ Set Étudiant</h3>
+        <p>Good music, good vibes jusqu’au bout de la nuit.</p>
+        <strong>Entrée gratuite</strong>
+        <small>Boissons payantes</small>
+      </article>
+    </div>
+  </section>
 
-  <div class="value-mini-card">
+  <section id="tarifs" class="section price-reservation">
+    <div class="price-card">
+      <p class="section-label">Tarifs étudiants</p>
+      <h2>Des prix pensés pour les étudiants</h2>
 
-    <h3>🌼 Convivial</h3>
+      <div class="price-line">
+        <span>Menu étudiant</span>
+        <strong>10€</strong>
+      </div>
 
-    <p>
-      Un lieu où l’on peut se retrouver,
-      échanger et créer du lien sans jugement.
-    </p>
+      <div class="price-line">
+        <span>Boissons</span>
+        <strong>À partir de 3€</strong>
+      </div>
 
-  </div>
+      <div class="price-line">
+        <span>Suppléments</span>
+        <strong>2€ à 4€</strong>
+      </div>
 
-  <div class="value-mini-card">
+      <div class="price-line">
+        <span>Karaoké / Stand-up</span>
+        <strong>À partir de 5€</strong>
+      </div>
 
-    <h3>🌱 Éco-responsable</h3>
+      <div class="price-line">
+        <span>Soirées DJ</span>
+        <strong>Entrée gratuite</strong>
+      </div>
 
-    <p>
-      Nous récupérons des invendus
-      pour lutter contre le gaspillage alimentaire.
-    </p>
+      <div class="discount-box">
+        Groupe de 4 et + <strong>-10%</strong> sur l’addition
+      </div>
+    </div>
 
-  </div>
-
-  <div class="value-mini-card">
-
-    <h3>💛 Solidaire</h3>
-
-    <p>
-      Alternants, jobs étudiants,
-      saisonniers et stages.
-    </p>
-
-  </div>
-
-  <div class="value-mini-card">
-
-    <h3>🎓 Étudiant avant tout</h3>
-
-    <p>
-      Tout est pensé pour la vie étudiante :
-      prix, ambiance et événements.
-    </p>
-
-  </div>
-
-</section>
-
-<section class="section" id="concept">
-
-  <div class="section-title">
-
-    <p>Le concept</p>
-
-    <h2>
-      Bien plus qu’un restaurant étudiant
-    </h2>
-
-  </div>
-
-</section>
-
-<section class="section" id="valeurs">
-
-  <div class="section-title">
-
-    <p>Nos valeurs</p>
-
-    <h2>
-      Nos valeurs
-    </h2>
-
-  </div>
-
-</section>
-
-<section class="section story-section" id="apropos">
-
-  <div class="story-left">
-
-    <p>À propos de nous</p>
-
-    <h2>
-      4 amis.<br>
-      1 constat.<br>
-      1 mission.
-    </h2>
-
-    <p class="story-text">
-      Nous étions 4 amis étudiants avec des parcours différents.
-      Pourtant, le constat était toujours le même :
-      solitude, cafés trop chers, transports compliqués et manque de lieux étudiants en banlieue parisienne.
-    </p>
-
-  </div>
-
-  <div class="story-image"></div>
-
-</section>
-
-<section class="reservation-section" id="reservation">
-
-  <div class="reservation-box">
-
-    <div class="reservation-left">
-
+    <div id="reservation" class="reservation-card">
       <p>Réservation</p>
+      <h2>Votre table <span>vous attend !</span></h2>
 
-      <h2>
-        Votre table vous attend 🌼
-      </h2>
+      <form>
+        <input type="text" placeholder="Nom complet">
+        <input type="tel" placeholder="Téléphone">
+        <input type="email" placeholder="Email">
+        <input type="number" placeholder="Nombre de personnes">
+        <select>
+          <option>Restaurant</option>
+          <option>Groupe</option>
+          <option>Soirée</option>
+          <option>Événement</option>
+        </select>
+        <button type="button" id="reservationBtn">Réserver maintenant</button>
+      </form>
+    </div>
+  </section>
 
+  <section id="apropos" class="section about-section">
+    <div class="about-text">
+      <p class="section-label">À propos de nous</p>
+      <h2>4 amis. 1 constat. 1 mission.</h2>
+
+      <p>
+        Nous étions 4 amis d’études avec des parcours différents. Pourtant, le constat était le même :
+        on galérait tous. Quand on voulait sortir, tout était loin, souvent sur Paris.
+      </p>
+
+      <p>
+        Nos résidences étudiantes et nos CROUS étaient en banlieue parisienne, mais il manquait
+        un vrai lieu pour manger, réviser, se retrouver et souffler.
+      </p>
+
+      <p>
+        Alors nous avons créé MEET and TASTE : un QG étudiant où l’on peut manger sans se ruiner,
+        travailler, rencontrer du monde et vivre pleinement sa vie étudiante.
+      </p>
     </div>
 
-    <div class="reservation-right">
+    <div class="about-photo"></div>
+  </section>
 
-      <input type="text" placeholder="Nom complet">
-      <input type="email" placeholder="Email">
-      <input type="number" placeholder="Nombre de personnes">
+  <section class="section eco-section">
+    <p class="section-label">Notre engagement</p>
+    <h2>Pour les étudiants, pour la planète.</h2>
 
-      <button id="reservation-btn">
-        Réserver maintenant
-      </button>
+    <p>
+      Nous luttons contre le gaspillage alimentaire en cuisinant des invendus récupérés auprès de partenaires engagés :
+      Too Good To Go, banques alimentaires, Carrefour, CROUS et autres acteurs solidaires.
+    </p>
+  </section>
 
-    </div>
-
-  </div>
-
-</section>
-
-<footer id="contact">
-
-  <div class="footer-grid">
-
+  <section id="recrutement" class="recruit-section">
     <div>
+      <h2>Rejoins l’aventure !</h2>
+      <p>Nous recrutons des alternants, jobs étudiants et saisonniers.</p>
+    </div>
+    <a href="#contact">Voir les offres d’emploi →</a>
+  </section>
 
+  <section id="contact" class="footer-infos">
+    <div>
       <h3>Horaires</h3>
-
-      <p>
-        Lun / Mar / Mer / Dim<br>
-        10h00 – 22h00
-      </p>
-
-      <p>
-        Jeu / Ven / Sam<br>
-        11h00 – 02h30
-      </p>
-
+      <p>Lun / Mar / Mer / Dim<br>10h00 – 22h00</p>
+      <p>Jeu / Ven / Sam<br>11h00 – 02h30</p>
     </div>
 
     <div>
-
-      <h3>Adresse</h3>
-
-      <p>
-        18 Rue des Tamaris<br>
-        77420 Champs-sur-Marne
-      </p>
-
+      <h3>Nous trouver</h3>
+      <p>18 Rue des Tamaris<br>77420 Champs-sur-Marne</p>
+      <p>RER A Noisy-Champs • Bus 312, 421</p>
     </div>
 
     <div>
-
-      <h3>Ouverture</h3>
-
-      <p>
-        Mars 2027 🌼
-      </p>
-
+      <h3>Suivez-nous</h3>
+      <p>Instagram • TikTok • Facebook • Snapchat</p>
+      <p>Ouverture Mars 2027 🌼</p>
     </div>
+  </section>
 
-  </div>
+</main>
 
+<footer class="footer">
+  <p><strong>MEET and TASTE</strong> — Le goût des bonnes vibes</p>
 </footer>
 
-</div>
-
 <script src="script.js"></script>
-
 </body>
 </html>
